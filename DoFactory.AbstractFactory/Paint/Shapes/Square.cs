@@ -2,9 +2,9 @@
 
 namespace DoFactory.AbstractFactory.Paint.Shapes
 {
-    class Square : Shape
+    class Square : IShape
     {
-        public override void Draw()
+        public void Draw()
         {
             Debug.WriteLine("Square has drawed");
         }

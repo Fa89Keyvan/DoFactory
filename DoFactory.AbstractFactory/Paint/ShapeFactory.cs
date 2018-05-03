@@ -5,12 +5,12 @@
 
     public class ShapeFactory : PaintAbstractFactory
     {
-        public override Colors.Color CreateColor(string color)
+        public override IColor CreateColor(string color)
         {
             return null;
         }
 
-        public override Shape CreateShape(string shape)
+        public override IShape CreateShape(string shape)
         {
             shape = shape.ToUpper();
 

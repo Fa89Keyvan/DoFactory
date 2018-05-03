@@ -2,9 +2,9 @@
 
 namespace DoFactory.AbstractFactory.Paint.Shapes
 {
-    class Rectangle : Shape
+    class Rectangle : IShape
     {
-        public override void Draw()
+        public void Draw()
         {
             Debug.WriteLine("Rectangle has drawed");
         }

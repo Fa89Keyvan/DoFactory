@@ -6,7 +6,6 @@ namespace DoFactory.PaintAbstractFactory
     using DoFactory.AbstractFactory.AnimalsWorld;
     using DoFactory.AbstractFactory.Paint.Colors;
     using DoFactory.AbstractFactory.Paint.Shapes;
-    using DoFactory.AbstractFactory.Paint;
 
     class Program
     {
@@ -30,44 +29,44 @@ namespace DoFactory.PaintAbstractFactory
 
         static void TestPaint()
         {
-            //get shape factory
-            PaintAbstractFactory shapeFactory = PaintFactoryProducer.GetPaintFactory("SHAPE");
+            //get IShape factory
+            PaintAbstractFactory shapeFactory = PaintFactoryProducer.GetPaintFactory("Shape");
 
-            //get an object of Shape Circle
-            Shape shape1 = shapeFactory.CreateShape("CIRCLE");
+            //get an object of IShape Circle
+            IShape shape1 = shapeFactory.CreateShape("CIRCLE");
 
-            //call Draw method of Shape Circle
+            //call Draw method of IShape Circle
             shape1.Draw();
 
-            //get an object of Shape Rectangle
-            Shape shape2 = shapeFactory.CreateShape("RECTANGLE");
+            //get an object of IShape Rectangle
+            IShape shape2 = shapeFactory.CreateShape("RECTANGLE");
 
-            //call Draw method of Shape Rectangle
+            //call Draw method of IShape Rectangle
             shape2.Draw();
 
-            //get an object of Shape Square 
-            Shape shape3 = shapeFactory.CreateShape("SQUARE");
+            //get an object of IShape Square 
+            IShape shape3 = shapeFactory.CreateShape("SQUARE");
 
-            //call Draw method of Shape Square
+            //call Draw method of IShape Square
             shape3.Draw();
 
             //get color factory
             PaintAbstractFactory colorFactory = PaintFactoryProducer.GetPaintFactory("COLOR");
 
             //get an object of Color Red
-            Color color1 = colorFactory.CreateColor("RED");
+            IColor color1 = colorFactory.CreateColor("RED");
 
             //call fill method of Red
             color1.Fill();
 
             //get an object of Color Green
-            Color color2 = colorFactory.CreateColor("Green");
+            IColor color2 = colorFactory.CreateColor("Green");
 
             //call fill method of Green
             color2.Fill();
 
             //get an object of Color Blue
-            Color color3 = colorFactory.CreateColor("BLUE");
+            IColor color3 = colorFactory.CreateColor("BLUE");
 
             //call fill method of Color Blue
             color3.Fill();

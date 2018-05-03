@@ -5,7 +5,7 @@ namespace DoFactory.AbstractFactory.Paint
 {
     class ColorFactory : PaintAbstractFactory
     {
-        public override Color CreateColor(string color)
+        public override IColor CreateColor(string color)
         {
             color = color.ToUpper();
 
@@ -23,7 +23,7 @@ namespace DoFactory.AbstractFactory.Paint
             return null;
         }
 
-        public override Shape CreateShape(string shape)
+        public override IShape CreateShape(string shape)
         {
             return null;
         }

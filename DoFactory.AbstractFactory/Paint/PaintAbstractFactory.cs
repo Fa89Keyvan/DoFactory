@@ -1,11 +1,12 @@
-﻿using DoFactory.AbstractFactory.Paint.Shapes;
+﻿using DoFactory.AbstractFactory.Paint.Colors;
+using DoFactory.AbstractFactory.Paint.Shapes;
 using System.Drawing;
 
 namespace DoFactory.AbstractFactory.Paint
 {
     public abstract class PaintAbstractFactory
     {
-        public abstract Colors.Color CreateColor(string color);
-        public abstract Shape CreateShape(string shape);
+        public abstract IColor CreateColor(string color);
+        public abstract IShape CreateShape(string shape);
     }
 }

@@ -2,9 +2,9 @@
 
 namespace DoFactory.AbstractFactory.Paint.Shapes
 {
-    class Circle : Shape
+    class Circle : IShape
     {
-        public override void Draw()
+        public void Draw()
         {
             Debug.WriteLine("Circle has drawed");
         }

@@ -2,9 +2,9 @@
 
 namespace DoFactory.AbstractFactory.Paint.Colors
 {
-    public class Red : Color
+    public class Red : IColor
     {
-        public override void Fill()
+        public void Fill()
         {
             Debug.WriteLine("Fill with Red color");
         }
