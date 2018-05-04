@@ -5,13 +5,15 @@ namespace DoFactory.FactoryMethod
 {
     using DoFactory.FactoryMethod.CMS;
     using Sample;
+    using Shapes;
 
     class Program
     {
         static void Main(string[] args)
         {
             //TestSample();
-            TestCMS();
+            //TestCMS();
+            TestShapeFactory();
         }
 
         static void TestSample()
@@ -48,6 +50,21 @@ namespace DoFactory.FactoryMethod
                     i++;
                 }
             }
+            
+        }
+
+        static void TestShapeFactory()
+        {
+            var shapeFactory = new ShapeFactory();
+
+            var shapes = new Shape[3];
+
+            shapes[0] = shapeFactory.CreateShape(ShapeTypes.Circle);
+            shapes[1] = shapeFactory.CreateShape(ShapeTypes.Rectangle);
+            shapes[2] = shapeFactory.CreateShape(ShapeTypes.Square);
+
+            foreach (var shape in shapes)
+                shape.Draw();
             
         }
     }
