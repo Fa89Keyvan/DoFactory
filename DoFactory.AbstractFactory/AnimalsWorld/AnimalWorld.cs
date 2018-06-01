@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DoFactory.AbstractFactory.AnimalsWorld
+﻿namespace DoFactory.AbstractFactory.AnimalsWorld
 {
     class AnimalWorld
     {

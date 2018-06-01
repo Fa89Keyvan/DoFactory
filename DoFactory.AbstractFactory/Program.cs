@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DoFactory.PaintAbstractFactory
+﻿namespace DoFactory.PaintAbstractFactory
 {
     using AbstractFactory.Paint;
     using DoFactory.AbstractFactory.AnimalsWorld;
