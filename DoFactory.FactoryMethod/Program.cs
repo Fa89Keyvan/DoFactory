@@ -12,8 +12,8 @@ namespace DoFactory.FactoryMethod
         static void Main(string[] args)
         {
             //TestSample();
-            //TestCMS();
-            TestShapeFactory();
+            TestCMS();
+            //TestShapeFactory();
         }
 
         static void TestSample()

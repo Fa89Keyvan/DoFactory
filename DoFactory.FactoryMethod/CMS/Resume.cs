@@ -5,9 +5,9 @@
     {
         public override void CreatePages()
         {
-            this.Pages.Add(new SkillsPage());
-            this.Pages.Add(new EducationPage());
-            this.Pages.Add(new ExperiencePage());
+            AddPage(new SkillsPage());
+            AddPage(new EducationPage());
+            AddPage(new ExperiencePage());
         }
     }
 }

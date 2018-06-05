@@ -14,9 +14,9 @@
         {
             this.CreatePages();
         }
-
         public List<Page> Pages => _pages;
 
         public abstract void CreatePages();
+        public void AddPage(Page page) => this._pages.Add(page);
     }
 }
