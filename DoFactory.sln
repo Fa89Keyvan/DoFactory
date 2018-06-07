@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoFactory.Singleton", "DoFa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoFactory.Builder", "DoFactory.Builder\DoFactory.Builder.csproj", "{E07E1440-38A6-43A4-B32D-CAD03FD94C2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoFactory.Prototype", "DoFactory.Prototype\DoFactory.Prototype.csproj", "{E2D9A02A-6212-4C08-8216-1A2F35D4AAD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoFactory.Prototype", "DoFactory.Prototype\DoFactory.Prototype.csproj", "{E2D9A02A-6212-4C08-8216-1A2F35D4AAD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoFactory.Observer", "DoFactory.Observer\DoFactory.Observer.csproj", "{29877ACB-0CA8-4E7E-AF30-58E23D3F24EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E2D9A02A-6212-4C08-8216-1A2F35D4AAD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D9A02A-6212-4C08-8216-1A2F35D4AAD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D9A02A-6212-4C08-8216-1A2F35D4AAD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29877ACB-0CA8-4E7E-AF30-58E23D3F24EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29877ACB-0CA8-4E7E-AF30-58E23D3F24EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29877ACB-0CA8-4E7E-AF30-58E23D3F24EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29877ACB-0CA8-4E7E-AF30-58E23D3F24EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
