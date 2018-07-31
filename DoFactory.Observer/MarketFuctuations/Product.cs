@@ -4,11 +4,16 @@ using System.Text;
 
 namespace DoFactory.Observer.MarketFuctuations
 {
-    class Product
+    public class ChangedPriceEventArgs
+    {
+        public string ProductName { get; set; }
+        public decimal NewPrice { get; set; }
+    }
+    abstract class Product
     {
         private decimal _price;
 
-        public  delegate void ChangePrice(Product product);
+        public  delegate void ChangePrice(object sender,ChangedPriceEventArgs changedPriceEventArgs);
         public  event ChangePrice OnChangedPrice;
 
         public Product(decimal price)
@@ -22,9 +27,10 @@ namespace DoFactory.Observer.MarketFuctuations
             set
             {
                 this._price = value;
-                OnChangedPrice(this);
+                OnChangedPrice(null,new ChangedPriceEventArgs { ProductName = this.ProductName, NewPrice = value });
             }
         }
         public int ID { get; set; }
+        public string ProductName { get; set; }
     }
 }

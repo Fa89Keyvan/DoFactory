@@ -5,6 +5,7 @@ namespace DoFactory.Observer
     using Sample;
     using MonitoringService;
     using MarketFuctuations;
+    using System.Collections.Generic;
 
     class Program
     {
@@ -14,13 +15,18 @@ namespace DoFactory.Observer
             //TestMonitoringService();
             TestMarketFuctuations();
         }
-        
+
         private static void TestMarketFuctuations()
         {
-            var product = new Product(100.0m);
-            var agent   = new Agent();
-            agent.AddProduct(product);
-            product.Price = 110.0m;
+            var car = new Car(20000000.0m) { ProductName = "Car" };
+            var home = new Home(22000000.0m) { ProductName = "Home" };
+
+            var agent = new Agent();
+            agent.AddProduct(car);
+            agent.AddProduct(home);
+
+            car.Price += 5000000.0m;
+            home.Price += 3000000.0m;
         }
 
         private static void TestMonitoringService()

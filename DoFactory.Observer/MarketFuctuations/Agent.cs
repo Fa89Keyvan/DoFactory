@@ -15,9 +15,9 @@ namespace DoFactory.Observer.MarketFuctuations
             _lstPorducts.Add(product);
         }
 
-        private void Product_OnChangedPrice(Product product)
+        private void Product_OnChangedPrice(object sender, ChangedPriceEventArgs changedPriceEventArgs)
         {
-            Debug.WriteLine($"Product {product.ID} price changes to {product.Price}");
+            Debug.WriteLine($"Product {changedPriceEventArgs.ProductName} price changes to {changedPriceEventArgs.NewPrice}");
         }
     }
 }
