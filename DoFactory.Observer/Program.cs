@@ -4,13 +4,23 @@ namespace DoFactory.Observer
 {
     using Sample;
     using MonitoringService;
+    using MarketFuctuations;
 
     class Program
     {
         static void Main(string[] args)
         {
             //TestSample();
-            TestMonitoringService();
+            //TestMonitoringService();
+            TestMarketFuctuations();
+        }
+        
+        private static void TestMarketFuctuations()
+        {
+            var product = new Product(100.0m);
+            var agent   = new Agent();
+            agent.AddProduct(product);
+            product.Price = 110.0m;
         }
 
         private static void TestMonitoringService()
