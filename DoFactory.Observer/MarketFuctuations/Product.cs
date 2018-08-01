@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DoFactory.Observer.MarketFuctuations
+﻿namespace DoFactory.Observer.MarketFuctuations
 {
     public class ChangedPriceEventArgs
     {
@@ -27,7 +23,7 @@ namespace DoFactory.Observer.MarketFuctuations
             set
             {
                 this._price = value;
-                OnChangedPrice(null,new ChangedPriceEventArgs { ProductName = this.ProductName, NewPrice = value });
+                OnChangedPrice?.Invoke(null, new ChangedPriceEventArgs { ProductName = this.ProductName, NewPrice = value });
             }
         }
         public int ID { get; set; }

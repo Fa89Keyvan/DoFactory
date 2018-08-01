@@ -1,11 +1,8 @@
-﻿using System;
-
-namespace DoFactory.Observer
+﻿namespace DoFactory.Observer
 {
     using Sample;
     using MonitoringService;
     using MarketFuctuations;
-    using System.Collections.Generic;
 
     class Program
     {
