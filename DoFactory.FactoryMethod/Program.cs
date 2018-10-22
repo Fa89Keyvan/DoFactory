@@ -12,8 +12,9 @@ namespace DoFactory.FactoryMethod
         static void Main(string[] args)
         {
             //TestSample();
-            TestCMS();
+            //TestCMS();
             //TestShapeFactory();
+            TestFiles();
         }
 
         static void TestSample()
@@ -66,6 +67,17 @@ namespace DoFactory.FactoryMethod
             foreach (var shape in shapes)
                 shape.Draw();
             
+        }
+
+        static void TestFiles()
+        {
+            var files = new File.File[2];
+            var fileCreator = new File.FileCreator();
+            files[0] = fileCreator.Create<File.Html>();
+            files[1] = fileCreator.Create<File.Pdf>();
+
+            foreach (var file in files)
+                file.ShowExtention();
         }
     }
 }
